@@ -1,21 +1,41 @@
 Link Prediction on a Scientific Article Graph
-This project implements a link prediction model on a graph of scientific papers, where each node represents a paper and an edge indicates a relationship between two papers. The goal is to predict the probability that an edge exists between two nodes.
-Approach (Feature Engineering + ML)
-We combine graph-based, text-based, and author-based features:
-Graph structure
+
+This project implements a link prediction model on a graph of scientific papers, where each node represents a paper and each edge indicates a relationship between papers. The goal is to predict the probability that a link exists between two nodes.
+
+🧠 Method
+
+The solution combines graph, text, and author features:
+
+Graph-based features
+
 Node2Vec embeddings
+
 GCN-refined node embeddings (PyTorch Geometric)
-Common Neighbors, Jaccard, Adamic–Adar, Preferential Attachment
-Abstract similarity
+
+Common Neighbors, Jaccard Coefficient, Adamic–Adar, Preferential Attachment
+
+Abstract similarity (cosine similarity)
+
 MPNet
+
 SBERT
+
 SciBERT
+
 TF-IDF
+
 Word2Vec
-→ cosine similarity per paper pair
+
 Author similarity
+
 Author collaboration graph + Node2Vec
+
 Aggregated paper-level embeddings
-All features are standardized and fed into an XGBoost classifier, which outputs the probability of a link. Cached embeddings are stored to avoid recomputation. The final predictions are written to submission.csv.
-Tech Stack
-Python • PyTorch Geometric • NetworkX • Sentence Transformers • Transformers • Gensim • Scikit-learn • XGBoost • NumPy • Pandas
+
+All features are standardized and passed into an XGBoost classifier, which outputs the final link probability. Cached embeddings are stored to avoid recomputation. Final predictions are saved in submission.csv.
+
+🛠 Tech Stack
+
+Python · PyTorch Geometric · NetworkX · Sentence Transformers · Transformers · Gensim · Scikit-learn · XGBoost · NumPy · Pandas
+
+Αν θέλεις, μπορώ να σου προσθέσω και Installation / How to run ενότητα 😊
