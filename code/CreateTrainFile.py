@@ -1,6 +1,3 @@
-#Georgios Vletsas 4924
-#Stefanos Gersch-Koutsogiannis 5046
-
 import pandas as pd
 import networkx as nx
 import random
