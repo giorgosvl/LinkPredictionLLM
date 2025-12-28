@@ -1,5 +1,3 @@
-#Georgios Vletsas 4924
-#Stefanos Gersch-Koutsogiannis 5046
 
 import numpy as np
 import pandas as pd
